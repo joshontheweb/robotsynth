@@ -1,0 +1,182 @@
+// vars
+@clouds: #ecf0f1;
+@silver: #bdc3c7;
+
+@concrete: #95a5a6;
+@asbestos: #7f8c8d;
+
+@wetAsphalt: #34495e;
+@midnightBlue: #2c3e50;
+
+@peterRiver: #3498db;
+@belizeHole: #2980b9;
+
+@robotBodyColor: @silver;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, sans-serif;
+  background: @clouds;
+}
+
+.main-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.robot-head {
+  padding-top: 50px;
+  width: 90%;
+  margin: 0 auto;
+
+  .handle {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    height: 40px;
+    border: solid black;
+    border-width: 1px 1px 0 1px;
+
+    &>div {
+      background: #444;
+    }
+    
+    .handle-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30%
+    }
+
+    .handle-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 10%
+    }
+    
+    .handle-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 10%
+    }
+  }
+
+  .robot-skull {
+    position: relative;
+    border: 1px solid #666;
+    height: 350px;
+    padding-left: 3%;
+    background: @robotBodyColor;
+    box-shadow: inset 0 0 100px @asbestos;
+
+    .dials {
+      position: absolute;
+      left: 6%;
+      top: -3%;
+      height: 3%;
+      width: 14%;
+
+      .left-dial {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30%;
+        height: 80%;
+        background: #444;
+        border: 1px solid black;
+      }
+      
+      .right-dial {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        height: 100%;
+        background: #444;
+        border: 1px solid black;
+      }
+    }
+
+    .head-block {
+      border: 1px solid black;
+      float: left;
+      height: 85%;
+      width: 30%;
+      margin: 2.5% 3% 0 0;
+    }
+
+    .center {
+      border: none;
+    
+      .type-logo {
+        color: @peterRiver;
+        text-transform: uppercase;
+        margin: -6px 0 0 4px;
+        font-family: impact;
+        text-shadow: 0 0 2px rgb(0,0,0);
+
+        .line-one {
+          font-size: 78px;
+          letter-spacing: 9px;
+        }
+
+        .line-two {
+          font-size: 80px;
+          letter-spacing: 13px;
+        }
+      }
+
+      .oscilloscope {
+        height: 41%;
+        margin-top: 10%;
+        background: #444;
+        box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+      }
+    }
+
+    .eye {
+      background: #444;
+      position: relative;
+      box-shadow: inset 0 0 200px rgba(0,0,0,.3);
+
+      .pupil {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 87%;
+        width: 90%;
+        background: #333;
+        //background: #333 url('/media/images/vertical_cloth.png');
+        box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+      }
+    }
+  }
+}
+
+.robot-body {
+  .robot-neck {
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    border: solid #666;
+    border-width: 0 1px 0 1px;
+    background: @asbestos;
+    box-shadow: inset 50px 0 100px rgba(0,0,0,.3);
+  }
+  
+  .robot-torso {
+    height: 500px;
+    border: 1px solid #666;
+    background: @robotBodyColor;
+    box-shadow: inset 0 0 200px @asbestos;
+  }
+}
+
+
+
