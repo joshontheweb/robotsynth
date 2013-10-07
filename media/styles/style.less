@@ -180,6 +180,8 @@ body {
 }
 
 .robot-body {
+  position: relative;
+  
   .robot-neck {
     width: 150px;
     height: 50px;
@@ -189,6 +191,75 @@ body {
     background: @asbestos;
     box-shadow: inset 50px 0 100px rgba(0,0,0,.3);
   }
+
+  .robot-arm {
+    width: 100px;
+    background: @asbestos;
+    height: 400px;
+    position: absolute;
+
+    .hand {
+      height: 200px;
+      bottom: -200px;
+      position: absolute;
+      width: 120%;
+      
+      .fingers {
+        position: absolute;
+        height: 150px;
+        width: 100%;
+        background: darken(@asbestos, 10%);
+        left: 0;
+        top: 0;
+        box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+      }
+
+      .thumb {
+        position: absolute;
+        height: 100px;
+        width: 50%;
+        background: darken(@asbestos, 10%);
+        top: 0;
+        box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+
+        &:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          box-shadow: 0 0 30px rgba(0,0,0,.4);
+        }
+      }
+    }
+  }
+
+  .left-arm {
+    left: -100px;
+    top: 100px;
+    box-shadow: inset -30px 0 100px rgba(0,0,0,.3);
+
+    .hand {
+      right: 0;
+
+      .thumb {
+        right: 0;
+      }
+    }
+  }
+
+  .right-arm {
+    right: -100px;
+    top: 100px;
+    box-shadow: inset 30px 0 100px rgba(0,0,0,.3);
+    
+    .hand {
+      left: 0;
+      
+      .thumb {
+        left: 0;
+      }
+    }
+  }
   
   .robot-torso {
     padding: 20px 0px 20px 9px;
@@ -196,6 +267,36 @@ body {
     background: @robotBodyColor;
     box-shadow: inset 0 0 200px @asbestos;
   }
+
+  .robot-leg {
+    width: 300px;
+    background: @asbestos;
+    height: 500px;
+    position: absolute;
+
+    .foot {
+      position: absolute;
+      height: 100px;
+      width: 110%;
+      background: darken(@asbestos, 10%);
+      left: -5%;
+      bottom: 0;
+      box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+    }
+  }
+
+  .left-leg {
+    left: 100px;
+    bottom: -500px;
+    box-shadow: inset 0 50px 100px rgba(0,0,0,.3);
+  }
+
+  .right-leg {
+    right: 100px;
+    bottom: -500px;
+    box-shadow: inset 0 50px 100px rgba(0,0,0,.3);
+  }
+    
 }
 
 /* synth overrides */
@@ -218,6 +319,10 @@ select {
 .dashboard {
   padding-left: 0;
   padding-right: 0;
+}
+
+.bottom {
+  padding: 5px;
 }
 
 .column {
