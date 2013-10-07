@@ -197,6 +197,7 @@ body {
     background: @asbestos;
     height: 400px;
     position: absolute;
+    border: 1px solid #555;
 
     .hand {
       height: 200px;
@@ -209,9 +210,9 @@ body {
         height: 150px;
         width: 100%;
         background: darken(@asbestos, 10%);
-        left: 0;
         top: 0;
         box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+        border: 1px solid #555;
       }
 
       .thumb {
@@ -221,6 +222,7 @@ body {
         background: darken(@asbestos, 10%);
         top: 0;
         box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+        border: solid #555;
 
         &:after {
           content: '';
@@ -234,29 +236,45 @@ body {
   }
 
   .left-arm {
-    left: -100px;
+    left: -101px;
     top: 100px;
     box-shadow: inset -30px 0 100px rgba(0,0,0,.3);
+    border-top-left-radius: 100px 50px;
 
     .hand {
       right: 0;
 
+      .fingers {
+        border-top-left-radius: 40px 100px;
+        border-bottom-left-radius: 20px;
+        right: 0;
+      }
+
       .thumb {
         right: 0;
+        border-width: 0 0 1px 1px;
       }
     }
   }
 
   .right-arm {
-    right: -100px;
+    right: -101px;
     top: 100px;
     box-shadow: inset 30px 0 100px rgba(0,0,0,.3);
+    border-top-right-radius: 100px 50px;
     
     .hand {
       left: 0;
+
+      .fingers {
+        border-top-right-radius: 40px 100px;
+        border-bottom-right-radius: 20px;
+        left: 0;
+      }
       
       .thumb {
         left: 0;
+        border-width: 0 1px 1px 0;
       }
     }
   }
@@ -282,6 +300,8 @@ body {
       left: -5%;
       bottom: 0;
       box-shadow: inset 0 0 100px rgba(0,0,0,.3);
+      border-top-left-radius: 100px 40px;
+      border-top-right-radius: 100px 40px;
     }
   }
 
