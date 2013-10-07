@@ -265,8 +265,8 @@
           keyboardUp(note);
         }
 
-       window.onkeydown = handleKeydown;
-       window.onkeyup = handleKeyup;
+       $('body').bind('keydown', handleKeydown);
+       $('body').bind('keyup', handleKeyup);
 
        var midiIn =  function(e) {
          console.log('yay im in here', e);

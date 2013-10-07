@@ -1,6 +1,7 @@
 (function() {
 
   $('.email-input').keypress(function(e) {
+    e.stopPropagation();
     if (e.keyCode === 13) {
       e.preventDefault();
       $('.submit').click();
@@ -11,7 +12,7 @@
   $('.submit').click(function(e) {
     e.preventDefault();
 
-    $('.email-signup').fadeOut('fast', function() {
+    $('.email-container').fadeOut('fast', function() {
       var opts = {
         lines: 17, // The number of lines to draw
         length: 30, // The length of each line
@@ -30,7 +31,7 @@
       };
       window.spinner = new Spinner(opts).spin();
       window.$spinner = $(window.spinner.el);
-      $('.main-content').append(window.$spinner);
+      $('.email-signup').append(window.$spinner);
       window.$spinner.fadeIn();
 
       $.ajax({
@@ -41,7 +42,7 @@
           $('.email-input').val('');
           window.$spinner.fadeOut('fast', function() {
             window.spinner.stop();
-            $('.main-content').append('Thanks! You have been sent a confirmation email.');
+            $('.email-signup').text('Thanks! You have been sent a confirmation email.');
           })
         },
         error: function(data) {
@@ -49,7 +50,7 @@
             window.spinner.stop();
           });
           $('.email-signup').fadeIn('fast', function() {
-            $('.main-content').append('<span class="error">Oh Noes! Something went wrong. :/</span>');
+            $('.email-signup').text('<span class="error">Oh Noes! Something went wrong. :/</span>');
           });
         }
       })

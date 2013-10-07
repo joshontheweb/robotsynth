@@ -3,7 +3,7 @@ var _ = require('underscore');
 var exec = require('child_process').exec
 var port = 2013;
 var mcapiKey = '33aec45bf6894883a6a1b921ba3bfe2f-us2';
-var soundKeepListId = 'edb3858885';
+var robotListId = '308dfd3ffb';
 var MailChimpAPI = require('mailchimp').MailChimpAPI;
 
 try { 
@@ -32,12 +32,8 @@ app.get('*', function(req, res) {
 });
 
 app.post('/signup', function(req, res) {
-  mcapi.listSubscribe({apikey: mcapiKey, id: soundKeepListId, email_address: req.body.email}, function(success) {
-    if (success) {
-      res.send('Success', 200);
-    } else {
-      res.send('Error', 405);
-    }
+  mcapi.listSubscribe({apikey: mcapiKey, id: robotListId, email_address: req.body.email}, function(success) {
+    res.send('Success', 200);
   });
 });
 
