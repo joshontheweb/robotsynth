@@ -18,17 +18,17 @@ app.use(express.bodyParser());
 app.use('/media', express.static(__dirname + '/media'));
 app.set('views', __dirname + '/templates');
 
-app.register('.html', {
-  compile: function (str, options) {
-    var template = _.template(str);
-    return function (locals) {
-      return template(locals);
-    };
-  }
-});
+// app.register('.html', {
+//   compile: function (str, options) {
+//     var template = _.template(str);
+//     return function (locals) {
+//       return template(locals);
+//     };
+//   }
+// });
 
-app.get('/', function(req, res) {
-  res.render('index.html', {});
+app.get('*', function(req, res) {
+  res.status(200).sendfile(__dirname + '/templates/index.html');
 });
 
 app.post('/signup', function(req, res) {
