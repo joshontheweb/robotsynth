@@ -1,6 +1,6 @@
 (function() {
 
-  $('.email-input').keypress(function(e) {
+  $('.email-input').keydown(function(e) {
     e.stopPropagation();
     if (e.keyCode === 13) {
       e.preventDefault();

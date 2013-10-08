@@ -4,7 +4,7 @@
   bs.models.Synth = Backbone.Model.extend({
     initialize: function() {
       var synth = this;
-      this.context = new webkitAudioContext();
+      this.context = new AudioContext();
       this.patches = new bs.collections.Patches();
       this.filter = new bs.models.Filter({type: 'lowpass'}, {context: this.context});
       this.oscillatorModule = new bs.models.OscillatorModule({}, {context: this.context});
