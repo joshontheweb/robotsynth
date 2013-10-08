@@ -1,4 +1,8 @@
 (function() {
-  window.router = new bs.routers.Main();
-  Backbone.history.start({pushState: true});
+  if (window.AudioContext) {
+    window.router = new bs.routers.Main();
+    Backbone.history.start({pushState: true});
+  } else {
+    $('.no-audio').fadeIn();
+  }
 })();
