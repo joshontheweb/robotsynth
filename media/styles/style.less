@@ -46,9 +46,11 @@ body {
 }
 
 .robot-head {
+  position: relative;
   padding-top: 50px;
   width: 90%;
   margin: 0 auto;
+  z-index: 100;
 
   .handle {
     width: 50%;
@@ -398,6 +400,30 @@ body {
     margin: 100px auto;
     float: none;
   }
+}
+
+.beats {
+  margin-bottom: 10px;
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  .beat {
+    &.active {
+      color: @alizarin;
+    }
+  }
+}
+
+@-webkit-keyframes headBob {
+  0%   { top: 0; right: 0; }
+  50%  { top: 20px; right: 20px; }
+  100% { top: 0; right: 0; }
+}
+
+.robot-head.dancing {
+  -webkit-animation: headBob 1s infinite;
 }
 
 /* synth overrides */
