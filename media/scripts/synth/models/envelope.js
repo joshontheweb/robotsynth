@@ -4,7 +4,7 @@
   bs.models.Envelope = Backbone.Model.extend({
     initialize: function(attrs, options) {
       this.context = options.context;
-      this.gainNode = this.node = this.context.createGainNode();
+      this.gainNode = this.node = this.context.createGain();
 
       this.generateBuffer();
       this.createSourceNode();

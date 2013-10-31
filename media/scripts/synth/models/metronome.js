@@ -4,7 +4,7 @@
   bs.models.Metronome = Backbone.Model.extend({
     initialize: function(attrs, options) {
       this.context = options.context;
-      this.gainNode = this.context.createGainNode();
+      this.gainNode = this.context.createGain();
       
       this.nextNoteTime = 0.0;        // when the next note is due.
       this.lookAhead = 0.25;          // How frequently to call scheduling function

@@ -1,6 +1,6 @@
 (function() {
   var beatSource;
-  var beatGain = synth.context.createGainNode();
+  var beatGain = synth.context.createGain();
   beatGain.gain.value = 5;
   beatGain.connect(synth.context.destination)
   $('.beat').click(function(e) {

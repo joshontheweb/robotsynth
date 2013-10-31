@@ -6,7 +6,7 @@
       this.context = this.collection.context;
       this.sources = this.collection.patchSources;
       this.destinations = this.collection.patchDestinations;
-      this.gainNode = this.context.createGainNode();
+      this.gainNode = this.context.createGain();
       this.destination = this.destinations[this.get('destination')].node;
 
       this.on('change:source', this.sourceChange);
@@ -44,7 +44,7 @@
       var source = this.sources[source].node;
       this.destination = this.destinations[this.get('destination')].node;
       this.gainNode.disconnect();
-      this.gainNode = this.context.createGainNode();
+      this.gainNode = this.context.createGain();
       
       if (source) {
         source.connect(this.gainNode);

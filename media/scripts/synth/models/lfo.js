@@ -5,7 +5,7 @@
     initialize: function(attrs, options) {
       this.context = options.context || new webkitCreateAudioContext();
       this.oscillatorNode = this.context.createOscillator();
-      this.gainNode = this.context.createGainNode();
+      this.gainNode = this.context.createGain();
 
       this.oscillatorNode.connect(this.gainNode);
 
@@ -16,7 +16,7 @@
       
       this.oscillatorNode.type = this.get('type');
       this.oscillatorNode.frequency.value = this.get('frequency');
-      this.oscillatorNode.detune = this.get('detune');
+      this.oscillatorNode.detune.value = this.get('detune');
       this.gainNode.gain.value = this.get('gain');
     },
 

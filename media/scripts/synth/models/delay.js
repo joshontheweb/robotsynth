@@ -4,10 +4,10 @@
   bs.models.Delay = Backbone.Model.extend({
     initialize: function(attrs, options) {
       this.context = options.context;
-      this.node = this.context.createDelayNode();
-      this.delay2Node = this.context.createDelayNode();
-      this.gainNode = this.context.createGainNode();
-      this.gain2Node = this.context.createGainNode();
+      this.node = this.context.createDelay();
+      this.delay2Node = this.context.createDelay();
+      this.gainNode = this.context.createGain();
+      this.gain2Node = this.context.createGain();
 
       this.gainNode.gain.value = this.get('gain');
       this.gain2Node.gain.value = this.get('gain');

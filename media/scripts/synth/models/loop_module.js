@@ -4,7 +4,7 @@
   bs.models.LoopModule = Backbone.Model.extend({
     initialize: function(attrs, options) {
       this.context = options.context;
-      this.gain = this.context.createGainNode();
+      this.gain = this.context.createGain();
       this.buffers = new Backbone.Collection();
       this.buffers.model = bs.models.Buffer;
       this.buffers.parentModel = this;
@@ -26,7 +26,7 @@
       } else {
         navigator.webkitGetUserMedia({audio: true}, function(stream) { 
           model.microphone = synth.context.createMediaStreamSource(stream);
-          model.micGain = model.context.createGainNode();
+          model.micGain = model.context.createGain();
           model.micGain.value = 20;
           model.microphone.connect(model.micGain);
           model.micGain.connect(model.gain);

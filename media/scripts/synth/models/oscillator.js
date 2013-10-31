@@ -22,7 +22,7 @@
     initOscillatorNode: function() {
       this.node.type = this.get('type');
       this.node.frequency.value = this.get('frequency');
-      this.node.detune = this.get('detune');
+      this.node.detune.value = this.get('detune');
     },
 
     frequencyChange: function(model, freq) {
