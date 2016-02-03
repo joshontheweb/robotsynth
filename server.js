@@ -2,15 +2,6 @@ var express = require('express');
 var _ = require('underscore');
 var exec = require('child_process').exec
 var port = 2013;
-var mcapiKey = '33aec45bf6894883a6a1b921ba3bfe2f-us2';
-var robotListId = '308dfd3ffb';
-var MailChimpAPI = require('mailchimp').MailChimpAPI;
-
-try { 
-    var mcapi = new MailChimpAPI(mcapiKey, { version : '1.3', secure : false });
-} catch (error) {
-    console.log('Error: ' + error);
-}
 
 var app = express.createServer();
 
@@ -31,12 +22,6 @@ app.get('*', function(req, res) {
   res.status(200).sendfile(__dirname + '/templates/index.html');
 });
 
-app.post('/signup', function(req, res) {
-  mcapi.listSubscribe({apikey: mcapiKey, id: robotListId, email_address: req.body.email}, function(success) {
-    res.send('Success', 200);
-  });
-});
-
 var child = exec('cowsay Running on port: '+port, function(err, stdout, stderr) {
   if (!err) {
 	console.log(stdout);
@@ -46,4 +31,3 @@ var child = exec('cowsay Running on port: '+port, function(err, stdout, stderr) 
 });
 
 app.listen(port);
-

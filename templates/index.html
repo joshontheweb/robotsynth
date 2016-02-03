@@ -11,9 +11,9 @@
   </head>
   <body>
     <div class="container">
-  
+
       <div class="main-content">
-    
+
         <div class="robot">
           <div class="beats">
             <h3>Gimme a beat!</h3>
@@ -23,7 +23,7 @@
           </div>
 
           <div class="robot-head">
-        
+
             <div class="handle">
               <div class="handle-top"></div>
               <div class="handle-left"></div>
@@ -31,16 +31,16 @@
             </div>
 
             <div class="robot-skull">
-          
+
               <div class="dials">
                 <div class="left-dial"></div>
                 <div class="right-dial"></div>
               </div>
-        
+
               <div class="head-block eye left-eye">
-                <div class="pupil"></div>  
+                <div class="pupil"></div>
               </div>
-          
+
               <div class="head-block center">
                 <div class="type-logo">
                   <div class="line-one">Robot</div>
@@ -48,17 +48,17 @@
                 </div>
                 <div id="oscilloscope" class="oscilloscope"></div>
               </div>
-          
+
               <div class="head-block eye right-eye">
-                <div class="pupil"></div>  
+                <div class="pupil"></div>
               </div>
 
             </div>
-        
+
           </div>
-      
+
           <div class="robot-body">
-            <div class="email-signup">
+            <!-- <div class="email-signup">
               <div class="call-to-action">Sign up to be a beta tester</div>
               <div class="email-container">
                 <input class="email-input" type="text" placeholder="email address" />
@@ -67,21 +67,21 @@
             </div>
             <div class="robot-info">
               <p>ROBOT is an online <br /> DAW (Digital Audio Workstation) <br /> for electronic musicians.</p>
-            </div>
+            </div> -->
 
             <div class="robot-neck"></div>
-            
+
             <div class="robot-arm left-arm">
               <div class="hand">
                 <div class="fingers"></div>
                 <div class="thumb"></div>
-              </div>  
+              </div>
             </div>
             <div class="robot-arm right-arm">
               <div class="hand">
                 <div class="fingers"></div>
                 <div class="thumb"></div>
-              </div>  
+              </div>
             </div>
             <div class="robot-torso">
               <div class="synth">
@@ -102,21 +102,21 @@
                   </div>
 
                 </div>
-                
+
               </div>
             </div>
             <div class="robot-leg left-leg">
               <div class="foot"></div>
             </div>
             <div class="robot-leg right-leg">
-              <div class="foot"></div>  
+              <div class="foot"></div>
             </div>
            </div>
-     
+
         </div>
-    
+
       </div>
-  
+
     </div>
 
     <!-- templates -->
@@ -128,7 +128,7 @@
             <div class="patches"></div>
           </div>
         </div>
-            
+
         <!--
         <div class="column">
           <div class="group cf">
@@ -137,7 +137,7 @@
           </div>
         </div>
         -->
-            
+
         <div class="column">
           <div class="group cf">
             <h3>Delay</h3>
@@ -196,7 +196,7 @@
           </div>
         </div>
         -->
-            
+
         <div class="column">
           <div class="group">
             <h3>CV Patches</h3>
@@ -204,9 +204,9 @@
             </div>
           </div>
         </div>
-            
+
       </div>
-          
+
 
       <div class="bottom cf">
         <div id="keyboard"></div>
@@ -215,10 +215,10 @@
           <p>Screenshots and videos of the app coming soon.</p>
           <p>Invites will be going out this winter.</p>
         </div>
-        
+
       </div>
     </script>
-        
+
     <script class="oscillator-module-template" type="text/html">
       <div class="block">
         <!--<h5>OSC1</h5>-->
@@ -233,7 +233,7 @@
         <div class="osc-3"></div>
       </div>
     </script>
-        
+
     <script class="mixer-template" type="text/html">
       <div class="row">
         <div class="block">
@@ -254,8 +254,8 @@
         <div class="gain-3"></div>
       </div>
     </script>
-        
-        
+
+
     <script class="oscillator-template" type="text/html">
       <div class="row">
         <div class="block">
@@ -270,7 +270,7 @@
         </div>
       </div>
     </script>
-        
+
     <script class="lfo-template" type="text/html">
       <div class="block">
         <h5>Waveform</h5>
@@ -293,16 +293,16 @@
       </div>
       -->
     </script>
-        
+
     <script class="gain-node-template" type="text/html">
       <div class="gain"></div>
       <span class="reading gain-reading"><%= gain %></span>
     </script>
-        
+
     <script class="keyboard-template" type="text/html">
       <div id="keyboard"></div>
     </script>
-        
+
     <script class="filter-template" type="text/html">
       <div class="block filter-frequency-block">
         <h5>Freq</h5>
@@ -315,20 +315,20 @@
         <span class="reading resonance-reading"><%= resonance %></span>
       </div>
     </script>
-        
+
     <script class="envelope-template" type="text/html">
       <h5>Attack</h5>
       <input class="attack" min=".01" max="3" step="0.01" value="<%= attack %>" type="range" />
       <span class="reading attack-reading"><%= attack %></span>
-          
+
       <h5>Decay</h5>
       <input class="decay" min=".01" max="3" step="0.01" value="<%= decay %>" type="range" />
       <span class="reading decay-reading"><%= decay %></span>
-          
+
       <h5>Sustain</h5>
       <input class="sustain" min="0" max="<%= maxValue %>" step="0.01" value="<%= sustain %>" type="range" />
       <span class="reading sustain-reading"><%= sustain %></span>
-          
+
       <h5>Release</h5>
       <input class="release" min=".01" max="3" step="0.01" value="<%= release %>" type="range" />
       <span class="reading release-reading"><%= release %></span>
@@ -346,7 +346,7 @@
         <span class="reading gain-reading"><%= gain %></span>
       </div>
     </script>
-        
+
     <script class="metronome-template" type="text/html">
       <div class="block">
         <h5>Tempo</h5>
@@ -360,7 +360,7 @@
         </div>
       </div>
     </script>
-        
+
     <script class="loop-module-template" type="text/html">
       <a href="#" class="microphone" title="toggle microphone on/off"></a>
       <div class="info">
@@ -370,7 +370,7 @@
       </div>
       <a href="#" class="record" title="hotkey: ~">Record Loop</a>
     </script>
-        
+
     <script class="buffer-template" type="text/html">
       <a href="#" class="delete">x</a>
       <a href="#" class="upload" title="Open Source This Loop"></a>
@@ -414,13 +414,13 @@
       <input type="text" class="patch-name" placeholder="name your patch" />
       <a href="#" class="save">Save</a>
     </script>
-        
+
     <script class="save-loop-popup-template" type="text/html">
       <h5>Name your loop to open source it</h5>
       <input type="text" class="loop-name" placeholder="name your loop" />
       <a href="#" class="save">Save</a>
     </script>
-        
+
     <!-- libs -->
     <script src="/media/scripts/libs/audiolib.js"></script>
     <script src="/media/scripts/libs/jquery.js"></script>
@@ -440,7 +440,7 @@
 
     <!-- routers -->
     <script src="/media/scripts/synth/routers/main.js"></script>
-        
+
     <!-- models -->
     <script src="/media/scripts/synth/models/synth.js"></script>
     <script src="/media/scripts/synth/models/oscillator.js"></script>
@@ -467,7 +467,7 @@
     <!-- collections -->
     <script src="/media/scripts/synth/collections/patches.js"></script>
     <script src="/media/scripts/synth/collections/cv_patches.js"></script>
-        
+
     <!-- views -->
     <script src="/media/scripts/synth/views/popup_view.js"></script>
     <script src="/media/scripts/synth/views/synth_view.js"></script>
@@ -491,7 +491,7 @@
     <script src="/media/scripts/synth/views/type_knob_view.js"></script>
     <script src="/media/scripts/synth/views/save_patch_popup_view.js"></script>
     <script src="/media/scripts/synth/views/save_loop_popup_view.js"></script>
-        
+
 
 
     <!-- init -->
@@ -517,4 +517,3 @@
     </script>
   </body>
 </html>
-
